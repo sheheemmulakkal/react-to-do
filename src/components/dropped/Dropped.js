@@ -8,7 +8,7 @@ const Dropped = () => {
           <h3>Dropped</h3>
         </div>
         <div className="">
-            <ListDropped />
+          <ListDropped />
         </div>
       </div>
     </div>

@@ -1,14 +1,14 @@
-.list-on-going{
-    background-color:  #d6b256;
-    transition: .3s;
+.list-on-going {
+  background-color: #d6b256;
+  transition: 0.3s;
 }
-.list-on-going:hover{
-    transform: scale(1.05);
-    transition: .3s;
+.list-on-going:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
-.done-icon{
-    color: rgb(20, 100, 17);
-    font-size: 25px;
-    cursor: pointer;
+.done-icon {
+  color: rgb(20, 100, 17);
+  font-size: 25px;
+  cursor: pointer;
 }

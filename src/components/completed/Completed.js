@@ -7,7 +7,7 @@ const Completed = () => {
         <div className="head d-flex justify-content-center">
           <h3>Completed</h3>
         </div>
-        <div className="">
+        <div>
           <ListCompleted />
           <ListCompleted />
         </div>

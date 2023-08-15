@@ -1,18 +1,48 @@
-*{
-    padding: 10px;
-    /* background-color: #00090e; */
+* {
+  padding: 10px;
+  /* background-color: #00090e; */
 }
-body{
-    background-color: #00090e;
-
+body {
+  background-color: #00090e;
 }
-.list{
-    height: 60px;
-    padding: 0;
-}
-
-.delete-icon{
-    font-size: 20px;
-    cursor: pointer;
+.list {
+  height: fit-content;
+  padding: 0;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-weight: 600;
+}
+.text-container {
+  max-width: 100%;
+  overflow: auto;
+  white-space: pre-line;
+  padding-inline: 0;
+}
+
+.text-container::-webkit-scrollbar {
+  height: 5px;
+  width: 8px; 
+}
+
+.text-container::-webkit-scrollbar-thumb {
+  background-color: #ccc; 
+  border-radius: 4px; 
+}
+.list div {
+  display: flex;
+  align-items: center;
+}
+.delete-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.time {
+  font-weight: 700;
+  font-size: 11px;
+  color: #3a3a3abd;
+}

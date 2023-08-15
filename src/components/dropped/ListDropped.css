@@ -1,15 +1,18 @@
-.list-dropped{
-    background-color:  rgb(199, 91, 91);
-    transition: .3s;
+.list-dropped {
+  background-color: rgb(199, 91, 91);
+  transition: 0.3s;
 }
-.list-dropped:hover{
-    transform: scale(1.05);
-    transition: .3s;
+.list-dropped:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
+.restore-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
 
-
-.restore-icon{
-    font-size: 20px;
-    cursor: pointer;
+.time-div {
+  display: block;
+  overflow: auto;
 }
