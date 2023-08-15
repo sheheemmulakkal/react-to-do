@@ -3,7 +3,7 @@ import "./OnGoing.css";
 const OnGoing = ( props ) => {
 
   const onGoingItems = props.toDoList.filter( (item) => (
-    item.status == 'onGoing'
+    item.status === 'onGoing'
   ))
   return (
     <div className=" col-12 col-sm-4 p-1">

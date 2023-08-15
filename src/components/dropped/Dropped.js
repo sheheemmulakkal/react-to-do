@@ -3,7 +3,7 @@ import "./Dropped.css";
 const Dropped = (props) => {
 
   const droppedItems = props.toDoList.filter( (item) => (
-    item.status == 'dropped'
+    item.status === 'dropped'
   ))
 
   return (
