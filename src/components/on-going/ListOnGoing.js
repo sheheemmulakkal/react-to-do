@@ -1,5 +1,5 @@
 import "./ListOnGoing.css";
-import { format } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 
 const ListOnGoing = ({ item, dropTask, completeTask }) => {
 
@@ -9,8 +9,8 @@ const ListOnGoing = ({ item, dropTask, completeTask }) => {
     const handleComplete = (itemId) => {
         completeTask(itemId, 'completed')
     }
-    const date = format(item.date, "dd MMM yyyy");
-    const time = format(item.date, "HH:mm:ss");
+    const date = format(parseISO(item.date), "dd MMM yyyy");
+    const time = format(parseISO(item.date), "HH:mm:ss");
   return (
     <div className="row list list-on-going rounded-2 mt-1">
       <div className="col-2 my-0 py-0">

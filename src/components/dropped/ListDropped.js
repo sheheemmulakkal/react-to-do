@@ -1,10 +1,10 @@
 import "./ListDropped.css";
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 
 const ListDropped = ({ item, restoreTask, deleteTask }) => {
 
-    const date = format(item.date, "dd MMM yyyy");
-    const time = format(item.date, "HH:mm:ss");
+    const date = format(parseISO(item.date), "dd MMM yyyy");
+    const time = format(parseISO(item.date), "HH:mm:ss");
     const deleteHandler = ( itemId ) => {
         deleteTask ( itemId )
     }

@@ -16,7 +16,7 @@ const AddTask = ({ addTask, toDoList }) => {
                 addTask ({
                     content : inputRef.current.value.trim(),
                     status : 'onGoing',
-                    date : new Date()
+                    date : new Date().toISOString()
                 })
                 inputRef.current.value = '';
             } else {
