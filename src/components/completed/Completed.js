@@ -1,6 +1,10 @@
 import "./Completed.css";
 import ListCompleted from "./ListCompleted";
-const Completed = () => {
+const Completed = ( props ) => {
+
+  const completedItems = props.toDoList.filter( (item) => (
+    item.status == 'completed'
+  ))
   return (
     <div className="col-12 col-sm-4 p-1">
       <div className="completed rounded-2">
@@ -8,8 +12,13 @@ const Completed = () => {
           <h3>Completed</h3>
         </div>
         <div>
-          <ListCompleted />
-          <ListCompleted />
+          { completedItems.map((item) => (
+            <ListCompleted 
+              item = {item} 
+              deleteTask = { props.deleteTask }
+            />
+          ))}
+
         </div>
       </div>
     </div>

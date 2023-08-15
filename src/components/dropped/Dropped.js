@@ -1,6 +1,11 @@
 import ListDropped from "./ListDropped";
 import "./Dropped.css";
-const Dropped = () => {
+const Dropped = (props) => {
+
+  const droppedItems = props.toDoList.filter( (item) => (
+    item.status == 'dropped'
+  ))
+
   return (
     <div className="col-12 col-sm-4 p-1">
       <div className="dropped rounded-2">
@@ -8,7 +13,13 @@ const Dropped = () => {
           <h3>Dropped</h3>
         </div>
         <div className="">
-          <ListDropped />
+          { droppedItems.map((item) => (
+            <ListDropped  
+              item = { item }
+              restoreTask = { props.restoreTask }
+              deleteTask = { props.deleteTask }
+            />
+          ))}
         </div>
       </div>
     </div>
