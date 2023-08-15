@@ -1,0 +1,15 @@
+.list-dropped{
+    background-color:  rgb(199, 91, 91);
+    transition: .3s;
+}
+.list-dropped:hover{
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+
+
+.restore-icon{
+    font-size: 20px;
+    cursor: pointer;
+}

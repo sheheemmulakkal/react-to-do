@@ -1,0 +1,18 @@
+*{
+    padding: 10px;
+    /* background-color: #00090e; */
+}
+body{
+    background-color: #00090e;
+
+}
+.list{
+    height: 60px;
+    padding: 0;
+}
+
+.delete-icon{
+    font-size: 20px;
+    cursor: pointer;
+}
+

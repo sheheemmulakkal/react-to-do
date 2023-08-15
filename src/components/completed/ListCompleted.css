@@ -1,0 +1,8 @@
+.list-completed{
+    background-color:  #57bd85;
+    transition: .3s;
+}
+.list-completed:hover{
+    transform: scale(1.05);
+    transition: .3s;
+}
