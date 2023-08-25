@@ -1,31 +1,32 @@
 import { useRef } from "react";
 
 const AddTask = ({ addTask, toDoList }) => {
+  const inputRef = useRef(null);
 
-    const inputRef = useRef(null);
+  const eraseTask = () => {
+    inputRef.current.value = "";
+    inputRef.current.focus();
+  };
 
-    const eraseTask = () => {
-        inputRef.current.value = '';
+  const addItem = () => {
+    if (inputRef.current.value.trim() !== "") {
+      const existingTask = toDoList.some(
+        (item) => item.content === inputRef.current.value.trim()
+      );
+      if (!existingTask) {
+        addTask({
+          content: inputRef.current.value.trim(),
+          status: "onGoing",
+          date: new Date().toISOString(),
+        });
+        inputRef.current.value = "";
+      } else {
         inputRef.current.focus();
+      }
+    } else {
+      inputRef.current.focus();
     }
-
-    const addItem = () => {
-        if( inputRef.current.value.trim() !== "" ) {
-            const existingTask = toDoList.some( item => item.content === inputRef.current.value.trim() )
-            if ( !existingTask) {
-                addTask ({
-                    content : inputRef.current.value.trim(),
-                    status : 'onGoing',
-                    date : new Date().toISOString()
-                })
-                inputRef.current.value = '';
-            } else {
-                inputRef.current.focus();
-            }
-        } else {
-            inputRef.current.focus()
-        }
-    }
+  };
 
   return (
     <div className="row col-12 d-flex justify-content-center">
@@ -42,16 +43,17 @@ const AddTask = ({ addTask, toDoList }) => {
           />
         </div>
         <div className="right-erase">
-          <button className=" btn btn-outline-* text-white px-0"
+          <button
+            className=" btn btn-outline-* text-white px-0"
             onClick={eraseTask}
           >
             <i class="fa-solid fa-delete-left erase-icon px-0"></i>
           </button>
         </div>
         <div className="right-add px-0">
-          <button 
-          onClick={addItem}
-          className="add-button btn btn-outline-* text-white px-0"
+          <button
+            onClick={addItem}
+            className="add-button btn btn-outline-* text-white px-0"
           >
             <i class="fa-solid fa-plus add-icon"></i>
           </button>

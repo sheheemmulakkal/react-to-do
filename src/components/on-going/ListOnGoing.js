@@ -1,21 +1,21 @@
 import "./ListOnGoing.css";
-import { format, parseISO } from 'date-fns'
+import { format, parseISO } from "date-fns";
 
 const ListOnGoing = ({ item, dropTask, completeTask }) => {
-
-    const handleDrop = (itemId) => {
-        dropTask(itemId, 'dropped')
-    }
-    const handleComplete = (itemId) => {
-        completeTask(itemId, 'completed')
-    }
-    const date = format(parseISO(item.date), "dd MMM yyyy");
-    const time = format(parseISO(item.date), "HH:mm:ss");
+  const handleDrop = (itemId) => {
+    dropTask(itemId, "dropped");
+  };
+  const handleComplete = (itemId) => {
+    completeTask(itemId, "completed");
+  };
+  const date = format(parseISO(item.date), "dd MMM yyyy");
+  const time = format(parseISO(item.date), "HH:mm:ss");
   return (
     <div className="row list list-on-going rounded-2 mt-1">
       <div className="col-2 my-0 py-0">
-        <i class="fa-solid fa-check done-icon"
-            onClick={() => handleComplete(item.id)}
+        <i
+          class="fa-solid fa-check done-icon"
+          onClick={() => handleComplete(item.id)}
         ></i>
       </div>
       <div className="col-8 my-0 py-0 ">
@@ -24,13 +24,14 @@ const ListOnGoing = ({ item, dropTask, completeTask }) => {
         </div>
       </div>
       <div className="col-2 my-0 py-0">
-        <i class="fa-solid fa-trash-can delete-icon"
-            onClick={() => handleDrop(item.id)}
+        <i
+          class="fa-solid fa-trash-can delete-icon"
+          onClick={() => handleDrop(item.id)}
         ></i>
       </div>
       <div className="col-12 my-0 py-0 d-flex justify-content-between">
-        <span className="time">{ date }</span>
-        <span className="time">{ time }</span>
+        <span className="time">{date}</span>
+        <span className="time">{time}</span>
       </div>
     </div>
   );

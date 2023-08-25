@@ -1,10 +1,9 @@
 import ListOnGoing from "./ListOnGoing";
 import "./OnGoing.css";
-const OnGoing = ( props ) => {
-
-  const onGoingItems = props.toDoList.filter( (item) => (
-    item.status === 'onGoing'
-  ))
+const OnGoing = (props) => {
+  const onGoingItems = props.toDoList.filter(
+    (item) => item.status === "onGoing"
+  );
   return (
     <div className=" col-12 col-sm-4 p-1">
       <div className="on-going rounded-2">
@@ -12,12 +11,12 @@ const OnGoing = ( props ) => {
           <h3>On going</h3>
         </div>
         <div>
-          { onGoingItems.map((items) => (
-            <ListOnGoing 
-              item = { items }
+          {onGoingItems.map((items) => (
+            <ListOnGoing
+              item={items}
               key={items.id}
               dropTask={props.dropTask}
-              completeTask={props.completeTask} 
+              completeTask={props.completeTask}
             />
           ))}
         </div>
